@@ -29,7 +29,7 @@ def bfs(visited, queue, array, node):
                 queue.append(neighboor)
 
 def removeIsland(img_arr, threshold):
-    # !important: the black pixel is 0 and white pixel is 1
+
     while 0 in img_arr:
         x,y = np.where(img_arr == 0)
         point = (x[0],y[0])
@@ -41,9 +41,6 @@ def removeIsland(img_arr, threshold):
             for i in visited:
                 img_arr[i[0],i[1]] = 1
         else:
-            # if the cluster is larger than threshold (i.e is the text), 
-            # we convert it to a temporary value of 2 to mark that we 
-            # have visited it. 
             for i in visited:
                 img_arr[i[0],i[1]] = 2
                 
